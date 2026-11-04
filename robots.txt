@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://jose-lorenzana-portfolio.vercel.app/sitemap.xml

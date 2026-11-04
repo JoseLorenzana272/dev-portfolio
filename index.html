@@ -1,36 +1,291 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="José Daniel Lorenzana Medina — DevOps & Cloud Engineer specializing in Kubernetes, DevSecOps, and cloud-native infrastructure. View my projects, skills, and experience." />
-    <meta name="keywords" content="DevOps, Cloud Engineer, Kubernetes, DevSecOps, Portfolio, José Lorenzana" />
-    <meta name="author" content="José Daniel Lorenzana Medina" />
-    <!-- Open Graph Metadata -->
-    <meta property="og:title" content="DevSecOps Portfolio – José Lorenzana" />
-    <meta property="og:description" content="Explore my comprehensive DevSecOps portfolio featuring hands-on implementation of Kubernetes, GitOps, CI/CD, and robust cloud-native security architecture." />
-    <meta property="og:url" content="https://jose-lorenzana-portfolio.vercel.app/" />
-    <meta name="image" property="og:image" content="https://jose-lorenzana-portfolio.vercel.app/preview.png" />
-    <meta property="og:image:type" content="image/png" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:type" content="website" />
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>José Lorenzana — Support Engineer, DevSecOps &amp; Cloud Security</title>
+<meta name="description" content="José Lorenzana, Support Engineer in Guatemala City focused on DevSecOps and cloud security. Creator of Fortress in a Box and speaker at Blue Team Con and Black Hat SecTor 2026.">
+<link rel="canonical" href="https://jose-lorenzana-portfolio.vercel.app/">
+<link rel="icon" href="assets/favicon.png">
+<meta property="og:type" content="profile">
+<meta property="og:url" content="https://jose-lorenzana-portfolio.vercel.app/">
+<meta property="og:title" content="José Lorenzana — Support Engineer, DevSecOps &amp; Cloud Security">
+<meta property="og:description" content="Creator of Fortress in a Box, free Kubernetes security for journalists and activists. Speaker at Blue Team Con and Black Hat SecTor 2026.">
+<meta property="og:image" content="https://jose-lorenzana-portfolio.vercel.app/assets/jose.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"José Lorenzana","jobTitle":"Support Engineer","worksFor":{"@type":"Organization","name":"ITM"},"alumniOf":"Universidad de San Carlos de Guatemala","address":{"@type":"PostalAddress","addressLocality":"Guatemala City","addressCountry":"GT"},"url":"https://jose-lorenzana-portfolio.vercel.app/","image":"https://jose-lorenzana-portfolio.vercel.app/assets/jose.jpg","email":"mailto:jodanielorenzana@gmail.com","knowsAbout":["DevSecOps","Kubernetes security","Cloud security"],"sameAs":["https://www.linkedin.com/in/jose-lorenzana-medina/","https://github.com/JoseLorenzana272","https://www.fortressinabox.dev/","https://www.youtube.com/@joselorenzana3524"]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #ffffff; --surface: #f3f5f8; --ink: #0b1020; --muted: #4b5366;
+  --accent: #1257ff; --accent-ink: #ffffff; --navy: #060d2a;
+  --small: 0.9375rem;
+  --body: clamp(1.0625rem, 1rem + 0.2vw, 1.1875rem);
+  --lead: clamp(1.25rem, 1.1rem + 0.6vw, 1.625rem);
+  --head: clamp(2.25rem, 1.4rem + 3.2vw, 4rem);
+  --display: clamp(3rem, 1.6rem + 5.6vw, 6.5rem);
+  --m: clamp(20px, 4vw, 64px);
+  --max: 1280px;
+  --gap: clamp(96px, 12vw, 176px);
+  --ease: cubic-bezier(.16, 1, .3, 1);
+}
+* { box-sizing: border-box; margin: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--ink); font: 400 var(--body)/1.55 Geist, system-ui, sans-serif; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; text-underline-offset: .2em; transition: color .2s; }
+a:hover { color: var(--accent); }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+h1, h2, h3 { font-weight: 700; letter-spacing: -0.035em; line-height: 1; text-wrap: balance; }
+h2 { font-size: var(--head); }
+h3 { font-size: var(--lead); letter-spacing: -0.02em; line-height: 1.2; }
+.wrap { width: min(100% - 2 * var(--m), var(--max)); margin-inline: auto; }
+.btn { display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; border-radius: 999px; background: var(--accent); color: var(--accent-ink); font-weight: 500; text-decoration: none; transition: transform .2s var(--ease), background .2s; }
+.btn:hover { color: var(--accent-ink); background: #0040e0; transform: translateY(-2px); }
+.btn:active { transform: translateY(0); }
 
-    <!-- Twitter Card Metadata -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="https://jose-lorenzana-portfolio.vercel.app/" />
-    <meta name="twitter:title" content="DevSecOps Portfolio – José Lorenzana" />
-    <meta name="twitter:description" content="Explore my comprehensive DevSecOps portfolio featuring hands-on implementation of Kubernetes, GitOps, CI/CD, and robust cloud-native security architecture." />
-    <meta name="twitter:image" content="https://jose-lorenzana-portfolio.vercel.app/preview.png" />
+/* header */
+.bar { display: flex; justify-content: space-between; align-items: center; padding-block: 28px; font-weight: 500; }
+.bar a { text-decoration: none; }
+.bar nav { display: flex; gap: 32px; }
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <title>DevSecOps Portfolio – José Lorenzana</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+/* hero */
+.hero { display: grid; grid-template-columns: 7fr 5fr; gap: clamp(32px, 5vw, 80px); align-items: center; padding-block: clamp(24px, 4vw, 64px) var(--gap); }
+.hero h1 { font-size: var(--display); }
+.hero .lede { font-size: var(--lead); line-height: 1.35; margin-top: 32px; max-width: 30ch; }
+.hero .facts { color: var(--muted); margin-top: 20px; max-width: 46ch; }
+.actions { display: flex; align-items: center; gap: 28px; margin-top: 40px; flex-wrap: wrap; font-weight: 500; }
+.hero figure img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 30%; border-radius: 20px; }
+
+/* fortress */
+.fortress { background: var(--navy); color: #fff; padding-block: var(--gap); }
+.f-grid { display: grid; grid-template-columns: 6fr 6fr; gap: clamp(32px, 5vw, 80px); align-items: center; }
+.fortress .lede { font-size: var(--lead); line-height: 1.35; margin-top: 28px; }
+.fortress .logo { mix-blend-mode: lighten; } /* the logo's own dark ground melts into the section */
+.layers { list-style: none; padding: 0; margin-top: 64px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; }
+.layers b { display: block; font-size: var(--lead); font-weight: 700; letter-spacing: -0.02em; margin-bottom: 6px; }
+.layers span { color: #c3cbea; }
+.install { margin-top: 64px; display: flex; gap: 24px 40px; align-items: center; flex-wrap: wrap; }
+pre { flex: 1 1 520px; min-width: 0; margin: 0; padding: 20px 24px; border-radius: 14px; background: #0e1840; color: #dfe6ff; font: 400 var(--small)/1.6 ui-monospace, SFMono-Regular, Menlo, monospace; overflow-x: auto; }
+.install p { display: flex; gap: 28px; font-weight: 500; flex-wrap: wrap; }
+.fortress a:hover { color: #8fb0ff; }
+
+/* talks: the conference photo in front of that city's downtown */
+.talks { padding-top: var(--gap); }
+.talks > .wrap > p { color: var(--muted); margin-top: 20px; max-width: 52ch; }
+.talk { position: relative; margin-top: 64px; min-height: clamp(520px, 56vw, 760px); display: grid; align-items: center; overflow: hidden; color: #fff; }
+.talk + .talk { margin-top: 24px; }
+.talk .city { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transform: scale(1.08); transition: transform 2s var(--ease); }
+.talk::after { content: ""; position: absolute; inset: 0; background: rgba(6, 13, 42, .55); }
+.talk.on .city { transform: scale(1); }
+.talk .inner { position: relative; z-index: 1; display: grid; grid-template-columns: 5fr 7fr; gap: clamp(32px, 5vw, 80px); align-items: center; padding-block: 64px; }
+.talk.flip .inner { grid-template-columns: 7fr 5fr; }
+.talk.flip .photo { order: 2; }
+.talk .photo img { width: 100%; object-fit: cover; border-radius: 16px; }
+.talk .photo.tall img { aspect-ratio: 4 / 5; object-position: 50% 45%; }
+.talk .photo.wide img { aspect-ratio: 4 / 3.4; object-position: 30% 50%; }
+.talk h3 { font-size: var(--head); letter-spacing: -0.035em; line-height: 1; }
+.talk .meta { font-size: var(--lead); margin-top: 16px; }
+.talk .what { margin-top: 24px; max-width: 40ch; }
+
+/* experience + projects */
+.cv { padding-top: var(--gap); display: grid; grid-template-columns: 4fr 8fr; gap: clamp(32px, 5vw, 80px); }
+.cv + .cv { padding-top: 96px; }
+.cv aside p { color: var(--muted); margin-top: 16px; max-width: 30ch; }
+.rows { list-style: none; padding: 0; }
+.rows li { display: grid; grid-template-columns: 1fr auto; gap: 4px 24px; padding: 24px 28px; border-radius: 14px; transition: background .2s; }
+.rows li:nth-child(odd) { background: var(--surface); }
+.rows li:hover { background: #e7ecf5; }
+.rows b { font-weight: 500; font-size: var(--lead); letter-spacing: -0.01em; }
+.rows span { color: var(--muted); text-align: right; font-variant-numeric: tabular-nums; }
+.rows em { font-style: normal; color: var(--muted); grid-column: 1 / -1; }
+.rows a { text-decoration: none; }
+
+/* about */
+.about { padding-top: var(--gap); display: grid; grid-template-columns: 4fr 8fr; gap: clamp(32px, 5vw, 80px); }
+.about .text p { font-size: var(--lead); line-height: 1.45; max-width: 46ch; }
+.about .text p + p { margin-top: 24px; }
+
+/* contact */
+.contact { margin-top: var(--gap); background: var(--surface); padding-block: var(--gap); }
+.contact p { font-size: var(--lead); color: var(--muted); margin-top: 20px; max-width: 40ch; }
+.mail { display: inline-block; margin-top: 48px; font-size: var(--head); font-weight: 700; letter-spacing: -0.035em; line-height: 1.05; overflow-wrap: anywhere; text-decoration: none; color: var(--accent); }
+.mail:hover { color: var(--ink); }
+.links { display: flex; gap: 32px; margin-top: 48px; font-weight: 500; flex-wrap: wrap; }
+footer { padding-block: 32px 40px; font-size: var(--small); color: var(--muted); display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+footer .credits { max-width: 80ch; }
+
+/* entrances: content is only hidden when JS runs */
+.js [data-in] > * { opacity: 0; transform: translateY(24px); transition: opacity .8s var(--ease), transform .8s var(--ease); }
+.js [data-in].on > * { opacity: 1; transform: none; }
+.js [data-in].on > *:nth-child(2) { transition-delay: 90ms; }
+.js [data-in].on > *:nth-child(3) { transition-delay: 180ms; }
+.js [data-in].on > *:nth-child(n+4) { transition-delay: 260ms; }
+
+@media (max-width: 860px) {
+  .bar nav a:not(:last-child) { display: none; }
+  .hero, .f-grid, .talk .inner, .talk.flip .inner, .cv, .about { grid-template-columns: 1fr; }
+  .hero figure { order: -1; }
+  .hero figure img { aspect-ratio: 1 / 1; }
+  .talk.flip .photo { order: 0; }
+  .talk { min-height: 0; }
+  .layers { grid-template-columns: 1fr 1fr; }
+  .fortress .logo { max-width: 420px; }
+  .rows li { padding: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+  .js [data-in] > * { opacity: 1; transform: none; }
+  .talk .city { transform: none; }
+}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js')</script>
+
+<header class="wrap bar">
+  <a href="#">José Lorenzana</a>
+  <nav aria-label="Main">
+    <a href="#fortress">Fortress in a Box</a>
+    <a href="#talks">Talks</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <section class="wrap hero" aria-label="Introduction" data-in>
+    <div>
+      <h1>José Lorenzana</h1>
+      <p class="lede">Support Engineer in Guatemala City, focused on DevSecOps and cloud security. I build security that journalists and activists can afford.</p>
+      <p class="facts">Support Engineer at ITM. Systems Engineering coursework completed at USAC, graduating in 2027. Creator of Fortress in a Box and a 2026 speaker at Blue Team Con and Black Hat SecTor.</p>
+      <div class="actions">
+        <a class="btn" href="mailto:jodanielorenzana@gmail.com?subject=Hello%20Jos%C3%A9">Email me</a>
+        <a href="cv.pdf" download="Jose_Lorenzana_CV.pdf">Résumé</a>
+        <a href="https://github.com/JoseLorenzana272">GitHub</a>
+        <a href="https://www.linkedin.com/in/jose-lorenzana-medina/">LinkedIn</a>
+      </div>
+    </div>
+    <figure>
+      <img src="assets/jose.jpg" width="1200" height="1600" alt="José Lorenzana smiling on a boat in Toronto harbour, the CN Tower behind him">
+    </figure>
+  </section>
+
+  <section class="fortress" id="fortress">
+    <div class="wrap">
+      <div class="f-grid" data-in>
+        <div>
+          <h2>Fortress in a Box</h2>
+          <p class="lede">The Kubernetes security stack large companies run, made free, open source and installable with one command, for organizations whose security budget is zero.</p>
+        </div>
+        <img class="logo" src="assets/fortress.png" width="1536" height="1024" alt="Fortress in a Box logo: a pixel-art turtle carrying a blue castle tower as its shell" loading="lazy">
+      </div>
+      <ul class="layers" data-in aria-label="What it runs">
+        <li><b>Trivy</b><span>Scans every image in CI before it ships.</span></li>
+        <li><b>Kyverno</b><span>Blocks root, privileged and untagged pods at admission.</span></li>
+        <li><b>Falco</b><span>Watches runtime behaviour and alerts on Discord.</span></li>
+        <li><b>ArgoCD</b><span>Puts the cluster back within 180 seconds of drift.</span></li>
+      </ul>
+      <div class="install" data-in>
+<pre><code>git clone --branch v2.0.0 https://github.com/JoseLorenzana272/fortress-in-a-box
+cd fortress-in-a-box &amp;&amp; ./install.sh</code></pre>
+        <p><a href="https://www.fortressinabox.dev/">fortressinabox.dev</a><a href="https://github.com/JoseLorenzana272/fortress-in-a-box">Source on GitHub</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="talks" id="talks">
+    <div class="wrap" data-in>
+      <h2>Talks</h2>
+      <p>Presenting Fortress in a Box to security teams in North America.</p>
+    </div>
+
+    <article class="talk" data-city>
+      <img class="city" src="assets/skyline-de-chicago-desde-el-centro-illinois.jpg" width="1920" height="929" alt="" loading="lazy">
+      <div class="wrap inner" data-in>
+        <div class="photo tall"><img src="assets/btc2026.jpg" width="1180" height="1600" alt="José with a speaker badge, thumbs up in front of the Blue Team Con 2026 backdrop" loading="lazy"></div>
+        <div>
+          <h3>Blue Team Con</h3>
+          <p class="meta">Chicago, USA · 2026</p>
+          <p class="what">“Fortress in a Box: Enterprise-Grade Kubernetes Security for the Organizations That Can’t Afford It.”</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="talk flip" data-city>
+      <img class="city" src="assets/toronto-skyline-toronto-islands-b.jpg" width="1920" height="947" alt="" loading="lazy">
+      <div class="wrap inner" data-in>
+        <div class="photo wide"><img src="assets/sector2026.jpg" width="1600" height="1200" alt="José holding the flag of Guatemala in front of the Black Hat SecTor 2026 wall" loading="lazy"></div>
+        <div>
+          <h3>Black Hat SecTor</h3>
+          <p class="meta">Toronto, Canada · 2026</p>
+          <p class="what">Speaker. Bringing Fortress in a Box, and the flag of Guatemala, to Canada’s largest security conference.</p>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <section class="wrap cv" id="experience">
+    <aside data-in>
+      <h2>Experience</h2>
+      <p>Supporting production systems by day, teaching operating systems on the side.</p>
+    </aside>
+    <ul class="rows" data-in>
+      <li><b>Support Engineer, ITM</b><span>Now</span><em>Guatemala City</em></li>
+      <li><b>Teaching Assistant, USAC</b><span>Now</span><em>Operating Systems I</em></li>
+      <li><b>Systems Engineering, USAC</b><span>Graduating 2027</span><em>All coursework completed · Universidad de San Carlos de Guatemala</em></li>
+    </ul>
+  </section>
+
+  <section class="wrap cv" id="projects">
+    <aside data-in>
+      <h2>Projects</h2>
+      <p>Open source, all on GitHub.</p>
+    </aside>
+    <ul class="rows" data-in>
+      <li><b><a href="https://github.com/JoseLorenzana272/fortress-in-a-box">Fortress in a Box</a></b><span>Shell</span><em>Kubernetes security stack: scanning, policy, runtime detection, self-healing.</em></li>
+      <li><b><a href="https://github.com/JoseLorenzana272/OakLand-Compiler-RISCV">OakLand Compiler</a></b><span>JavaScript</span><em>Translates a small language to RISC-V assembly.</em></li>
+      <li><b><a href="https://github.com/JoseLorenzana272/OakLand-Interpreter">OakLand Interpreter</a></b><span>JavaScript</span><em>Interpreter for the same language.</em></li>
+      <li><b><a href="https://github.com/JoseLorenzana272/Weather-Tweets-K8s-GCP">Weather Tweets</a></b><span>Shell</span><em>Event pipeline on Kubernetes in Google Cloud.</em></li>
+      <li><b><a href="https://github.com/JoseLorenzana272/INFOHUB">INFOHUB</a></b><span>TypeScript</span><em>Web application.</em></li>
+    </ul>
+  </section>
+
+  <section class="wrap about" id="about">
+    <h2 data-in>About</h2>
+    <div class="text" data-in>
+      <p>The organizations most likely to be attacked, newsrooms, activists, human rights groups, are the ones that can least afford protection. That gap is what I work on.</p>
+      <p>I like infrastructure that heals itself, policies that say no early, and documentation a tired person can follow at night. Away from the terminal I play piano.</p>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap" data-in>
+      <h2>Let’s talk</h2>
+      <p>Conference talks, security work, or a cluster that worries you.</p>
+      <a class="mail" href="mailto:jodanielorenzana@gmail.com?subject=Hello%20Jos%C3%A9">jodanielorenzana@<wbr>gmail.com</a>
+      <div class="links">
+        <a href="https://www.linkedin.com/in/jose-lorenzana-medina/">LinkedIn</a>
+        <a href="https://github.com/JoseLorenzana272">GitHub</a>
+        <a href="https://www.fortressinabox.dev/">fortressinabox.dev</a>
+        <a href="https://www.youtube.com/@joselorenzana3524">YouTube</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap">
+  <span>© 2026 José Lorenzana · Guatemala City</span>
+  <span class="credits">Skylines: “Skyline de Chicago desde el centro” by Diego Delso, CC BY-SA 3.0; “Toronto skyline toronto islands b” by chensiyuan, CC BY-SA 4.0; via Wikimedia Commons.</span>
+</footer>
+
+<script>
+const io = new IntersectionObserver(es => es.forEach(e => {
+  if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); }
+}), { rootMargin: '0px 0px -10% 0px' });
+document.querySelectorAll('[data-in], [data-city]').forEach(el => io.observe(el));
+</script>
+</body>
 </html>
