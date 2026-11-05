@@ -11,7 +11,10 @@
 <meta property="og:url" content="https://jose-lorenzana-portfolio.vercel.app/">
 <meta property="og:title" content="José Lorenzana — Support Engineer, DevSecOps &amp; Cloud Security">
 <meta property="og:description" content="Creator of Fortress in a Box, free Kubernetes security for journalists and activists. Speaker at Blue Team Con and Black Hat SecTor 2026.">
-<meta property="og:image" content="https://jose-lorenzana-portfolio.vercel.app/assets/jose.jpg">
+<meta property="og:image" content="https://jose-lorenzana-portfolio.vercel.app/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="José Lorenzana, Support Engineer, DevSecOps and Cloud Security">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"José Lorenzana","jobTitle":"Support Engineer","worksFor":{"@type":"Organization","name":"ITM"},"alumniOf":"Universidad de San Carlos de Guatemala","address":{"@type":"PostalAddress","addressLocality":"Guatemala City","addressCountry":"GT"},"url":"https://jose-lorenzana-portfolio.vercel.app/","image":"https://jose-lorenzana-portfolio.vercel.app/assets/jose.jpg","email":"mailto:jodanielorenzana@gmail.com","knowsAbout":["DevSecOps","Kubernetes security","Cloud security"],"sameAs":["https://www.linkedin.com/in/jose-lorenzana-medina/","https://github.com/JoseLorenzana272","https://www.fortressinabox.dev/","https://www.youtube.com/@joselorenzana3524"]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -126,12 +129,14 @@ footer .credits { max-width: 80ch; }
 
 @media (max-width: 860px) {
   .bar nav a:not(:last-child) { display: none; }
-  .hero, .f-grid, .talk .inner, .talk.flip .inner, .cv, .about { grid-template-columns: 1fr; }
+  .hero, .f-grid, .talk .inner, .talk.flip .inner, .cv, .about { grid-template-columns: minmax(0, 1fr); }
+  .f-grid > *, .cv > *, .about > *, .hero > * { min-width: 0; }
+  pre { flex-basis: 100%; }
   .hero figure { order: -1; }
   .hero figure img { aspect-ratio: 1 / 1; }
   .talk.flip .photo { order: 0; }
   .talk { min-height: 0; }
-  .layers { grid-template-columns: 1fr 1fr; }
+  .layers { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .fortress .logo { max-width: 420px; }
   .rows li { padding: 20px; }
 }
